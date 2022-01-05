@@ -1,0 +1,5 @@
+Q1. Write a query to fetch name and id of all students who have credits greater than 30.
+Q2. Find the ID, name, dept_name and department building of every instructor
+Q3. Find the total number of distinct students who have taken each course_id
+Q4. Find the maximum enrollment across all courses (across all years/semesters/sections, without eliminating duplicate enrollments from the counts).  Do this by using a variant of the previous query as part of a with clause in the form "with relname as (...) select ..."
+Q5. Find IDs of students who have taken both CS-101 and CS-190
