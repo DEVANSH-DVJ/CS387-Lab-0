@@ -1,5 +1,5 @@
 import sys
-import sqlite3 as sql
+import psycopg2 as pg
 
 with open(sys.argv[1], 'r') as file:
     query = file.read()
@@ -7,7 +7,8 @@ with open(sys.argv[1], 'r') as file:
 try:
     DB_NAME = "univ.db"
 
-    conn = sql.connect(DB_NAME)
+    conn = pg.connect(database='univ', user='postgres',
+                      password='secret', host='localhost', port='5432')
     cur = conn.cursor()
 
     cur.execute(query)
