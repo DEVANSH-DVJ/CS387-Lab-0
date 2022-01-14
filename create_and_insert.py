@@ -1,11 +1,11 @@
 import psycopg2 as pg
 
-with open('DDL.sql', 'r') as file:
+with open('PS/DDL.sql', 'r') as file:
     crt = file.read()
-with open('sampleData.sql', 'r') as file:
+with open('PS/sampleData.sql', 'r') as file:
     ins = file.read()
 
-conn = pg.connect(database='univ', user='postgres',
+conn = pg.connect(database='Lab0', user='postgres',
                   password='secret', host='localhost', port='5432')
 cur = conn.cursor()
 

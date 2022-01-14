@@ -5,9 +5,7 @@ with open(sys.argv[1], 'r') as file:
     query = file.read()
 
 try:
-    DB_NAME = "univ.db"
-
-    conn = pg.connect(database='univ', user='postgres',
+    conn = pg.connect(database='Lab0', user='postgres',
                       password='secret', host='localhost', port='5432')
     cur = conn.cursor()
 
